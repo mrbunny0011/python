@@ -1,0 +1,124 @@
+# clASS OF ZOO______________________________
+class zoo:
+    def __init__(self,name,location,area,opening_time,closing_time,number_of_animal,pric_of_ticket):
+        self.name=name
+        self.location=location
+        self.area=area
+        self.opening_time=opening_time
+        self.closing_time=closing_time
+        self.number_of_animal=number_of_animal
+        self.pric_of_ticket=pric_of_ticket
+    def display(self):
+        print("\n\nName         : " + self.name )
+        print("Location     : " + self.location)
+        print("Area         : " + self.area)
+        print("Opening Time : " + self.opening_time )
+        print("Closing Time : " + self.closing_time)
+        print("Number of Animal : " + self.number_of_animal )
+        print("Pric of Ticket   : " + self.pric_of_ticket)
+        
+zoo1=zoo("WILD TIME ZOO","STREET NO # 12 NEW YORK","2 SQUARE KM","9:00 AM","11:00 PM","100","10_$")
+
+# CLASS VISITOR________________________________
+class visitor:
+    def __init__ (self,name,ticket_number):
+        self.name=name
+        self.ticket_number=ticket_number
+    def display(self):
+        print("Visitor Name          : " + self.name)
+        print("Visitor Ticket Number : " + self.ticket_number)
+visit1=visitor("Abdul Basit ", " 2020")
+
+# CLASS RESTURANT______________________________ 
+class resturant:
+    def __init__(self,name,location,number_of_dishes):
+        self.name=name
+        self.location=location
+        self.number_of_dishes=number_of_dishes
+    def display(self):
+        print("RESTURANT NAME : "+self.name)
+        print("LOCATION OF RESTURANT : "+self.location)
+        print("NUMBERS OF DISHES : "+self.number_of_dishes)
+rst1=resturant("WILD PEOPLE","D-BLOCK","100")        
+rst2=resturant("NEW_CAFE","E_BLOCK","150")
+
+# PICNIC_AREA___________________________________
+class picnic_area:
+    def __init__(self,name,location,capacity):
+        self.name=name
+        self.location=location
+        self.capacity=capacity
+    def display(self):
+        print("NAME OF PICNIC-AREA : "+self.name)
+        print("LOCATION OF POOL : "+self.location)
+        print("MAXIMUM CAPACITY : "+self.capacity)
+ar1=picnic_area("WILD TIME POOL ","C-BLOCK","50") 
+ar2=picnic_area("WILD TIME PARK","F_BLOCK","50")
+
+# ANIMAL________________________________________
+class animal:
+    def __init__(self,specie_name,location):
+        self.specie_name=specie_name
+        self.location=location
+class carnivore(animal):
+    type_of_animal="carnivore"
+    diet="meat"
+    def display(self):
+        print("Type of Animal   : "+self.type_of_animal)
+        print("Specie_name      : "+self.specie_name)
+        print("Location_Section : "+self.location)
+        print("Food             : "+self.diet)
+        print("__________________________________")
+class herbivore(animal):
+    type_of_animal="Herbivore"
+    diet="plants"
+    def display(self):
+        print("Type of Animal   : "+self.type_of_animal)
+        print("Specie_name      : "+self.specie_name)
+        print("Location_Section : "+self.location)
+        print("Food             : "+self.diet)
+
+specie1=carnivore("[Lion,Leopard,Dog,Tiger,Cheetah]","A_Block")
+specie2=herbivore("[Elephant,Panda,Gorilla,Horse,Deer,Zebra]","B_Block")
+
+# MENU_______________________________
+i=0
+while i==0 :
+        print("\n\n\n\t\t MENU")
+        print("\nPRESS 1 TO DISPLAY ZOO INFORMATION")
+        print("PRESS 2 TO DISPLAY VISITOR INFORMATION")
+        print("PRESS 3 TO DISPLAY RESTAURANT INFORMATION")
+        print("PRESS 4 TO DISPLAY PICNIC AREA INFORMATION")
+        print("PRESS 5 TO DISPLAY INFORMATION OF ANIMALS")
+        print("PRESS X TO EXIT")
+        print("ENTER YOUR CHOICE ")
+        num=input("ENTER YOUR CHOICE : ")
+        print("________________________________________\n\n")
+        if num=="1":
+            zoo1.display()
+        elif num=="2":
+            visit1.display()
+            choice=input("If any new visitor Enter press 'yes' Other wise 'NO'")
+            if choice=="yes":
+                name=input(" Enter visitor Name ")
+                number=input(" Enter visitor Ticket Number ")
+                visit2=visitor(name,number)    
+                print("Name : "+name)
+                print("Ticket Number : "+number)
+                print("THANKS FOR VISITING " +name )
+        elif num=="3":
+            rst1.display()
+            print("________________________________")
+            rst2.display()
+        elif num=="4":
+            ar1.display()
+            print("____________________________________")
+            ar2.display()
+        elif num=="5":
+            specie1.display()
+            specie2.display()
+        elif num=="x"or"X":
+            print("THANKS FOR VISITING SIR")
+            i=1
+            
+            
